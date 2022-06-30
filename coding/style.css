@@ -61,13 +61,15 @@ main {
     padding: 0;
     border: 0;
 }
-#KV {
+#KV img {
     width: 100%;
-    min-height: 100vh;
-    background-repeat: no-repeat;
+    max-width: 1920px;
+    height: 600px;
+    object-fit: cover;
+ /*   background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-image: url(img/mainvisual.jpg);
+    background-image: url(img/mainvisual.jpg); */
 }
 #about {
     width: 960px;
@@ -104,7 +106,8 @@ main {
     font-size: 16px;
 }
 #bicycle {
-    width: 960px;
+    width: 100%;
+    max-width: 960px;
     margin: 0 auto;
     padding: 0;
 }
@@ -123,7 +126,7 @@ main {
     padding: 0;
     text-align: center;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 #bicycle .bicycle-list .bicycle-contents {
     width: 30%;
@@ -142,4 +145,32 @@ footer {
     padding-top: 60px;
     text-align: center;
     color: #24292E;
+}
+
+/* -- For SP -- */
+@media screen and (max-width: 960px) {
+header {
+    width: 100%;
+}
+#KV img {
+    height: calc(100vh-60px);
+}
+#about {
+    width: 100%;
+}
+
+#bicycle .bicycle-contents {
+    width: 100%;
+    max-width: 960px;
+}
+#bicycle .bicycle-list {
+    /*display: block;
+    margin: 0 auto;*/
+    width: 100%;
+    flex-direction: column;
+}
+#bicycle .bicycle-list .bicycle-contents {
+    width: 100%;
+    height: auto;
+}
 }
